@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Sticky Double Navbar Collapse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/icon/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg header-1">
+    <div class="container content text-start">
+      <p><a href="#">Miễn phí vận chuyển</a> cho tất cả các đơn hàng</p>
+    </div>
+    <div class="cart-icon text-end" data-bs-toggle="modal" data-bs-target="#loginRegisterModal">
+      <button class="btn btn-outline-success"><i class="bi bi-person"></i> Đăng Nhập</button>
+    </div>
+    <div class="cart-icon" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+      <button class="btn btn-outline-success"><i class="bi bi-cart3"></i></button>
+    </div>
+  </nav>
+<!-- offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Giỏ hàng của bạn</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Nội dung giỏ hàng của bạn ở đây -->
+      <p>Đây là giỏ hàng của bạn. Bạn có thể đặt các mặt hàng và thông tin khác vào đây.</p>
+      <div class="offcanvas-footer">
+        <a href="cart.html" class="btn btn-outline-info text-center">Xác Nhận Đơn Hàng</a>
+      </div>
+    </div>
+  </div>
+<!-- modal -->
+<div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="loginRegisterModalLabel">Đăng Nhập</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+              <form>
+                <div class="mb-2">
+                  <label for="loginEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email của bạn">
+                </div>
+                <div class="mb-2">
+                  <label for="loginPassword" class="form-label">Mật Khẩu</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu của bạn">
+                </div>
+                <div class="input-group mb-2 d-flex justify-content-between">
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="formCheck">
+                      <label for="formCheck" class="form-check-label text-secondary"><small>Ghi Nhớ</small></label>
+                  </div>
+                  <div class="forgot">
+                      <small><a href="#">Quên Mật Khẩu?</a></small>
+                  </div>
+                </div>
+                <div class="text-center mb-3">
+                  <button type="submit" class="btn btn-lg btn-outline-info w-100">Đăng Nhập</button>
+              </div>
+              <div class="input-group mb-3">
+                  <button class="btn btn-lg btn-light w-100 fs-6">
+                      <i class="bi bi-google"></i>
+                      <small>Đăng Nhập bằng Google</small>
+                  </button>
+              </div>
+                <div class="register text-center mt-3">
+                  <p>Bạn Chưa Có Tài Khoản?<a href="register.html"> Đăng Ký</a></p>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark header-2 sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Sản Phẩm</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Loại Sản Phẩm
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Thịt</a></li>
+              <li><a class="dropdown-item" href="#">Hải Sản</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Rau</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html" tabindex="-1">Blog</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+          <button class="btn btn-outline-success" style="width: 150px;" type="submit">Tìm kiếm</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Use the Bootstrap container to make the image responsive -->
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/left-banner.jpg" alt="banner" class="img-fluid">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 class="animate__animated animate__slideOutUp_a">Tiêu đề ví dụ.</h1>
+            <p class="animate__animated animate__slideOutUp_b">Một số nội dung ví dụ đại diện cho slide đầu tiên của carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Đăng ký</a></p>
+          </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/mid-banner.jpg" alt="banner-2" class="img-fluid">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="animate__animated animate__slideOutUp_a">Tiêu đề ví dụ khác.</h1>
+              <p class="animate__animated animate__slideOutUp_b">Một số nội dung ví dụ đại diện cho slide thứ hai của carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Tìm hiểu thêm</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/right-banner.jpg" alt="banner-3" class="img-fluid">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1 class="animate__animated animate__slideOutUp_a">Thêm một ví dụ nữa.</h1>
+              <p class="animate__animated animate__slideOutUp_b">Một số nội dung ví dụ đại diện cho slide thứ ba của carousel này.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Blog</a></p>
+            </div>
+          </div>
+        </div>        
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container pb-5">
+    <div class="p-5 mb-4 bg-light rounded-3 content-product">
+        <div class="container-fluid py-5">
+          <h3 class="display-5 fw-bold">Tùy chỉnh jumbotron</h3>
+          <p class="col-md-8 fs-4">Sử dụng một loạt tiện ích, bạn có thể tạo jumbotron này, giống như trong các phiên bản trước của Bootstrap. Hãy xem các ví dụ dưới đây để biết cách kết hợp lại và làm mới nó theo ý thích của bạn.</p>
+          <button class="btn btn-primary btn-lg" type="button">Xem Thêm</button>
+        </div>
+    </div>
+    <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h4>Thay đổi nền</h4>
+            <p>Thay đổi tiện ích background-color và thêm một tiện ích color với lớp `.text-*` để tạo một jumbotron có diện mạo khác nhau. Sau đó, pha trộn và kết hợp với các chủ đề thành phần và nhiều hơn nữa.</p>
+            <div class="text-start">
+              <button class="btn btn-outline-light" type="button">Xem Thêm</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h4>Thêm viền</h4>
+            <p>Hoặc, giữ nó nhẹ nhàng và thêm viền để tạo thêm định nghĩa cho ranh giới của nội dung. Hãy chắc chắn nhìn vào mã HTML nguồn ở đây vì chúng tôi đã điều chỉnh sự căn chỉnh và kích thước của cả hai cột để có chiều cao bằng nhau.</p>
+            <div class="text-start">
+              <button class="btn btn-outline-dark" type="button">Xem Thêm</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-light">
+    <h3 class="p-3 text-center" style="font-weight: 500;">Loại Sản Phẩm</h3>
+    <div class="container p-3">
+      <div class="loop owl-carousel">
+        <div class="item">
+          <img src="img/rau/rau.jpg" alt="">
+          <div class="content" style="padding-left: 55px; padding-top: 10px ;">
+            <p>Rau</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/cu/cu.jpg" alt="">
+          <div class="content" style="padding-left: 55px; padding-top: 10px ;">
+            <p>Củ</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/thit/thit.jpg" alt="">
+          <div class="content" style="padding-left: 55px; padding-top: 10px ;">
+            <p>Thịt</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/ca/ca.jpg" alt="">
+          <div class="content" style="padding-left: 55px; padding-top: 10px ;">
+            <p>Cá</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/qua/qua.jpg" alt="">
+          <div class="content" style="padding-left: 55px; padding-top: 10px ;">
+            <p>Quả</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/giavi/giavi.jpg" alt="">
+          <div class="content" style="padding-left: 55px; padding-top: 10px ;">
+            <p>Gia Vị</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <h3 class="text-center p-5">Sản Phẩm Ưa Thích</h3>
+  <div class="basic owl-carousel owl-theme pb-5">
+    <div class="item-1">
+      <div class="card">
+        <a href="product_detail.html"><img src="img/thit/Mixed-chicken-parts.jpg" class="card-img-top" alt="Product 3"></a>
+          <div class="card-body">
+              <h5 class="card-title">Thịt Gà</h5>
+              <p class="card-text">Mô tả sản phẩm 1.</p>
+              <p class="card-text">Giá: $100</p>
+              <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+          </div>
+      </div>
+    </div>
+    <div class="item-1">
+      <div class="card">
+        <a href="product_detail.html"><img src="img/thit/thit.jpg" class="card-img-top" alt="Product 3"></a>
+          <div class="card-body">
+              <h5 class="card-title">Thịt</h5>
+              <p class="card-text">Mô tả sản phẩm 1.</p>
+              <p class="card-text">Giá: $100</p>
+              <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+          </div>
+      </div>
+    </div>
+    <div class="item-1">
+      <div class="card">
+        <a href="product_detail.html"><img src="img/thit/thit-2.jpg" class="card-img-top" alt="Product 3"></a>
+          <div class="card-body">
+              <h5 class="card-title">Thịt</h5>
+              <p class="card-text">Mô tả sản phẩm 1.</p>
+              <p class="card-text">Giá: $100</p>
+              <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid parallax pt-5 text-white text-center">
+    <div class="parallax-content">
+      <h1 class="animate__animated animate__slideOutUp_a">Khuyến Mãi</h1>
+      <p class="animate__animated animate__slideOutUp_b">Chỉ Riêng Hôm Nay Khuyến Mãi 15% cho các loại Gia Vị</p>
+      <p><a class="btn btn-lg btn-outline-dark" href="#">Xem Thêm</a></p>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-light">
+    <div class="container pt-5">
+      <h1 class="text-center">Sản Phẩm</h1>   
+      <div class="button-our d-flex justify-content-center pt-3">
+        <button class="btn btn-outline-info me-2" id="specialBtn">Đặc Biệt</button>
+        <button class="btn btn-outline-info me-2" id="newBtn">Mới</button>
+        <button class="btn btn-outline-info" id="bestsellerBtn">Bán Chạy</button>
+      </div>
+      <div id="specialProduct" class="product-content pt-5 pb-3">
+        <div class="product-special">
+          <div class="row">
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ca/ca.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ca/ca-1.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/thit/Mixed-chicken-parts.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/thit/thit-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/thit/thit-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/thit/thit.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ca/ca-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ca/ca.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/thit/Mixed-chicken-parts.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="newProduct" class="product-content pt-5">
+        <div class="product-new">
+          <div class="row">
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ke-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ke-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/ke3.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ke-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ke-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/ke3.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ke-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ke-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/ke3.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bestseller" class="product-content pt-5">
+        <div class="product-best">
+          <div class="row">
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ke-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ke-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/ke3.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ke-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ke-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/ke3.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+              <div class="card">
+                <a href="product_detail.html"><img src="img/ke-1.jpg" class="card-img-top" alt="Product 3"></a>
+                  <div class="card-body">
+                      <h5 class="card-title">Sản phẩm 1</h5>
+                      <p class="card-text">Mô tả sản phẩm 1.</p>
+                      <p class="card-text">Giá: $100</p>
+                      <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                  <a href="product_detail.html"><img src="img/ke-2.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 2</h5>
+                        <p class="card-text">Mô tả sản phẩm 2.</p>
+                        <p class="card-text">Giá: $150</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-product">
+                <div class="card">
+                <a href="product_detail.html"><img src="img/ke3.jpg" class="card-img-top" alt="Product 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                        <button class="btn btn-outline-info">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="text-center p-3">Recent News</h3>
+    <div class="new owl-carousel owl-theme pb-5">
+
+      <div class="item-3">
+        <div class="card">
+          <img src="img/left-banner.jpg" class="card-img-top" alt="Supermarket Image">
+          <div class="card-body">
+            <h5 class="card-title">Chúc mừng bạn đã tới Supermarket!</h5>
+            <p class="card-text">Trải nghiệm mua sắm tuyệt vời và ưu đãi hấp dẫn đang chờ bạn.</p>
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-3">
+        <div class="card">
+          <img src="img/right-banner.jpg" class="card-img-top" alt="Supermarket Image">
+          <div class="card-body">
+            <h5 class="card-title">Chúc mừng bạn đã tới Supermarket!</h5>
+            <p class="card-text">Trải nghiệm mua sắm tuyệt vời và ưu đãi hấp dẫn đang chờ bạn.</p>
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-3">
+        <div class="card">
+          <img src="img/mid-banner.jpg" class="card-img-top" alt="Supermarket Image">
+          <div class="card-body">
+            <h5 class="card-title">Chúc mừng bạn đã tới Supermarket!</h5>
+            <p class="card-text">Trải nghiệm mua sắm tuyệt vời và ưu đãi hấp dẫn đang chờ bạn.</p>
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-3">
+        <div class="card">
+          <img src="img/giavi/giavi.jpg" class="card-img-top" alt="Supermarket Image">
+          <div class="card-body">
+            <h5 class="card-title">Chúc mừng bạn đã tới Supermarket!</h5>
+            <p class="card-text">Trải nghiệm mua sắm tuyệt vời và ưu đãi hấp dẫn đang chờ bạn.</p>
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTopBtn" class="btn btn-secondary back-to-top" title="Back to Top">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <div class="container-fluid">
+    <div class="menu-bottom row">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <h4>Column 1</h4>
+        <hr>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <h4>Column 2</h4>
+        <hr>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <h4>Column 3</h4>
+        <hr>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <h4>NEWSLETTER</h4>
+        <hr>
+        <ul>
+          <li>Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Nội Thất An Gia.</li>
+          <li>Email: xxx@gmail.com</li>
+          <li>Hotline: 180xxxx</li>
+          <li>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p class="text-center">&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+</main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

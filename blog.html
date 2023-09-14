@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Sticky Double Navbar Collapse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/icon/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card img{
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg header-1">
+    <div class="container content text-start">
+      <p><a href="#">Miễn phí vận chuyển</a> cho tất cả các đơn hàng</p>
+    </div>
+    <div class="cart-icon text-end" data-bs-toggle="modal" data-bs-target="#loginRegisterModal">
+      <button class="btn btn-outline-success"><i class="bi bi-person"></i> Đăng Nhập</button>
+    </div>
+    <div class="cart-icon" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+      <button class="btn btn-outline-success"><i class="bi bi-cart3"></i></button>
+    </div>
+  </nav>
+<!-- offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Giỏ hàng của bạn</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Nội dung giỏ hàng của bạn ở đây -->
+      <p>Đây là giỏ hàng của bạn. Bạn có thể đặt các mặt hàng và thông tin khác vào đây.</p>
+      <div class="offcanvas-footer">
+        <a href="cart.html" class="btn btn-outline-info text-center">Xác Nhận Đơn Hàng</a>
+      </div>
+    </div>
+  </div>
+<!-- modal -->
+<div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="loginRegisterModalLabel">Đăng Nhập</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+              <form>
+                <div class="mb-2">
+                  <label for="loginEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email của bạn">
+                </div>
+                <div class="mb-2">
+                  <label for="loginPassword" class="form-label">Mật Khẩu</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu của bạn">
+                </div>
+                <div class="input-group mb-2 d-flex justify-content-between">
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="formCheck">
+                      <label for="formCheck" class="form-check-label text-secondary"><small>Ghi Nhớ</small></label>
+                  </div>
+                  <div class="forgot">
+                      <small><a href="#">Quên Mật Khẩu?</a></small>
+                  </div>
+                </div>
+                <div class="text-center mb-3">
+                  <button type="submit" class="btn btn-lg btn-outline-info w-100">Đăng Nhập</button>
+              </div>
+              <div class="input-group mb-3">
+                  <button class="btn btn-lg btn-light w-100 fs-6">
+                      <i class="bi bi-google"></i>
+                      <small>Đăng Nhập bằng Google</small>
+                  </button>
+              </div>
+                <div class="register text-center mt-3">
+                  <p>Bạn Chưa Có Tài Khoản?<a href="register.html"> Đăng Ký</a></p>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark header-2 sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Sản Phẩm</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Loại Sản Phẩm
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Thịt</a></li>
+              <li><a class="dropdown-item" href="#">Hải Sản</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Rau</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="blog.html" tabindex="-1" aria-disabled="true">Blog</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+          <button class="btn btn-outline-success" style="width: 150px;" type="submit">Tìm kiếm</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+        <div class="breadcrumb-area">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <!-- breadcrumb-list start -->
+                  <ul class="breadcrumb-list">
+                    <li>
+                      <a href="/" title="Back to the home page">Trang Chủ</a>
+                    </li>
+                    <li class="breadcrumb-item"></li>
+                    <li>
+                        <a href="/" class="active" title="Back to the home page">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                        Từ nguồn tin đúng
+                    </h3>
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Bài đăng mẫu</h2>
+                    <p class="blog-post-meta">1 tháng 1 năm 2021 bởi <a href="#">Mark</a></p>
+        
+                    <p>Thông tin đăng blog này trình bày một số loại nội dung được hỗ trợ và định dạng với Bootstrap. Kiểu chữ cơ bản, danh sách, bảng, hình ảnh, mã và nhiều nội dung khác đều được hỗ trợ như mong đợi.</p>
+                    <hr>
+                    <p>Đây là một đoạn văn bản bổ sung. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <h2>Danh sách trích dẫn</h2>
+                    <p>Đây là một ví dụ về trích dẫn trong hoạt động:</p>
+                    <blockquote class="blockquote">
+                        <p>Đoạn văn trích dẫn ở đây.</p>
+                    </blockquote>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <h3>Danh sách ví dụ</h3>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Là một phiên bản đề xuất ít hơn về văn bản chính xác trùng lặp được sử dụng trong suốt.</p>
+                    <p>Đây là một ví dụ về danh sách không được sắp xếp:</p>
+                    <ul>
+                        <li>Mục đầu tiên</li>
+                        <li>Mục thứ hai với mô tả dài hơn</li>
+                        <li>Mục thứ ba để kết thúc nó</li>
+                    </ul>
+                    <p>Và đây là một danh sách có thứ tự:</p>
+                    <ol>
+                        <li>Mục đầu tiên</li>
+                        <li>Mục thứ hai với mô tả dài hơn</li>
+                        <li>Mục thứ ba để kết thúc nó</li>
+                    </ol>
+                    <p>Và đây là một danh sách định nghĩa:</p>
+                    <dl>
+                        <dt>HyperText Markup Language (HTML)</dt>
+                        <dd>Ngôn ngữ được sử dụng để miêu tả và định nghĩa nội dung của một trang web</dd>
+                        <dt>Cascading Style Sheets (CSS)</dt>
+                        <dd>Được sử dụng để miêu tả về diện mạo của nội dung web</dd>
+                        <dt>JavaScript (JS)</dt>
+                        <dd>Ngôn ngữ lập trình được sử dụng để xây dựng các trang web và ứng dụng web nâng cao</dd>
+                    </dl>
+                    <h2>Các yếu tố HTML nội tuyến</h2>
+                    <p>HTML xác định một danh sách dài các thẻ nội tuyến có sẵn, danh sách đầy đủ có thể được tìm thấy trên <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mạng phát triển Mozilla</a>.</p>
+                    <ul>
+                        <li><strong>Để in đậm văn bản</strong>, sử dụng <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+                        <li><em>Để in nghiêng văn bản</em>, sử dụng <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+                        <li>Viết tắt, như <abbr title="Ngôn ngữ Đánh dấu Siêu Văn bản">HTML</abbr> nên sử dụng <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, với thuộc tính <code class="language-plaintext highlighter-rouge">title</code> tùy chọn cho cụm từ đầy đủ.</li>
+                        <li>Trích dẫn, như <cite>— Mark Otto</cite>, nên sử dụng <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+                        <li>Văn bản <del>Bị xóa</del> nên sử dụng <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> và văn bản <ins>được chèn</ins> nên sử dụng <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+                        <li>Văn bản trên <sup>chỉ số trên</sup> sử dụng <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> và văn bản dưới <sub>chỉ số dưới</sub> sử dụng <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+                    </ul>
+                    <p>Hầu hết các yếu tố này được trình diễn bởi trình duyệt với vài sửa đổi từ phía chúng ta.</p>
+                    <h2>Tiêu đề</h2>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <h3>Tiêu đề phụ</h3>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <pre><code>Đoạn mã ví dụ</code></pre>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Là một phiên bản đề xuất ít hơn về văn bản chính xác trùng lặp được sử dụng trong suốt.</p>
+                </article>
+        
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Bài đăng khác</h2>
+                    <p class="blog-post-meta">23 tháng 12 năm 2020 bởi <a href="#">Jacob</a></p>
+        
+                    <p>Đây là một đoạn văn bản bổ sung khác. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <blockquote>
+                        <p>Câu trích dẫn dài ở đây, có thể có một số <strong>văn bản nhấn mạnh</strong> ở giữa đoạn.</p>
+                    </blockquote>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <h3>Bảng ví dụ</h3>
+                    <p>Và đừng quên về các bảng trong những bài đăng này:</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên</th>
+                                <th>Upvotes</th>
+                                <th>Downvotes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Bob</td>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Charlie</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Tổng</td>
+                                <td>21</td>
+                                <td>23</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+        
+                    <p>Đây là một đoạn văn bản bổ sung khác. Là một phiên bản đề xuất ít hơn về văn bản chính xác trùng lặp được sử dụng trong suốt.</p>
+                </article>
+        
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Tính năng mới</h2>
+                    <p class="blog-post-meta">14 tháng 12 năm 2020 bởi <a href="#">Chris</a></p>
+        
+                    <p>Đây là một đoạn văn bản bổ sung khác. Đã được viết để điền vào không gian có sẵn và cho thấy cách đoạn văn bản dài ảnh hưởng đến nội dung xung quanh. Chúng tôi sẽ lặp lại nó nhiều lần để giữ cho sự trình diễn liên tục, vì vậy hãy chú ý đối với chuỗi văn bản chính xác này.</p>
+                    <ul>
+                        <li>Mục đầu tiên</li>
+                        <li>Mục thứ hai với mô tả dài hơn</li>
+                        <li>Mục thứ ba để kết thúc nó</li>
+                    </ul>
+                    <p>Đây là một đoạn văn bản bổ sung khác. Là một phiên bản đề xuất ít hơn về văn bản chính xác trùng lặp được sử dụng trong suốt.</p>
+                </article>
+        
+                <nav class="blog-pagination" aria-label="Phân trang">
+                    <a class="btn btn-outline-primary" href="#">Cũ hơn</a>
+                    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Mới hơn</a>
+                </nav>
+            </div>
+        
+            <div class="col-md-4 pt-3">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">Giới thiệu</h4>
+                        <p class="mb-0">Tùy chỉnh phần này để kể cho khách truy cập một chút về xuất bản của bạn, nhà văn, nội dung hoặc một điều gì đó hoàn toàn khác. Hoàn toàn tùy bạn.</p>
+                    </div>
+        
+                    <div class="p-4" style="background-color: beige;">
+                        <h4 class="fst-italic">Lưu trữ</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">Tháng 3 năm 2021</a></li>
+                            <li><a href="#">Tháng 2 năm 2021</a></li>
+                            <li><a href="#">Tháng 1 năm 2021</a></li>
+                            <li><a href="#">Tháng 12 năm 2020</a></li>
+                            <li><a href="#">Tháng 11 năm 2020</a></li>
+                            <li><a href="#">Tháng 10 năm 2020</a></li>
+                            <li><a href="#">Tháng 9 năm 2020</a></li>
+                            <li><a href="#">Tháng 8 năm 2020</a></li>
+                            <li><a href="#">Tháng 7 năm 2020</a></li>
+                            <li><a href="#">Tháng 6 năm 2020</a></li>
+                            <li><a href="#">Tháng 5 năm 2020</a></li>
+                            <li><a href="#">Tháng 4 năm 2020</a></li>
+                        </ol>
+                    </div>
+        
+                    <div class="p-4">
+                        <h4 class="fst-italic">Nơi khác</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>>
+
+        <button id="backToTopBtn" class="btn btn-secondary back-to-top" title="Back to Top">
+          <i class="bi bi-arrow-up-circle"></i>
+        </button>
+      
+        <div class="container-fluid">
+          <div class="menu-bottom row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4>Column 1</h4>
+              <hr>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4>Column 2</h4>
+              <hr>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4>Column 3</h4>
+              <hr>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4>NEWSLETTER</h4>
+              <hr>
+              <ul>
+                <li>Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Nội Thất An Gia.</li>
+                <li>Email: xxx@gmail.com</li>
+                <li>Hotline: 180xxxx</li>
+                <li>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p class="text-center">&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+      
+      </main>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+          // Wait for the DOM to be ready
+          document.addEventListener("DOMContentLoaded", function () {
+              // Get the filter section and the toggle button
+              const filterSection = document.getElementById("filterSection");
+              const toggleFilterButton = document.getElementById("toggleFilter");
+  
+              // Function to toggle the active class on the filter section
+              function toggleFilter() {
+                  filterSection.classList.toggle("active");
+              }
+  
+              // Attach a click event listener to the toggle button
+              toggleFilterButton.addEventListener("click", toggleFilter);
+          });
+      </script>
+  </body>
+  </html>
+  
