@@ -18,112 +18,112 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg header-1">
-        <div class="container content text-start">
-          <p><a href="#">Free Shipping</a> Orders From All Item</p>
-        </div>
-        <div class="cart-icon text-end" data-bs-toggle="modal" data-bs-target="#loginRegisterModal">
-          <button class="btn btn-outline-success"><i class="bi bi-person"></i> Đăng Nhập</button>
-        </div>
-        <div class="cart-icon" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
-          <button class="btn btn-outline-success"><i class="bi bi-cart3"></i></button>
-        </div>
-      </nav>
-    <!-- offcanvas -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" data-bs-backdrop="false">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="cartOffcanvasLabel">Giỏ hàng của bạn</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
-        </div>
-        <div class="offcanvas-body">
-          <!-- Nội dung giỏ hàng của bạn ở đây -->
-          <p>Đây là giỏ hàng của bạn. Bạn có thể đặt các mặt hàng và thông tin khác vào đây.</p>
-          <div class="offcanvas-footer">
-            <a href="#" class="btn btn-outline-info text-center">Xác Nhận Đơn Hàng</a>
-          </div>
-        </div>
+    <div class="container content text-start">
+      <p><a href="#">Miễn phí vận chuyển</a> cho tất cả các đơn hàng</p>
+    </div>
+    <div class="cart-icon text-end" data-bs-toggle="modal" data-bs-target="#loginRegisterModal">
+      <button class="btn btn-outline-success"><i class="bi bi-person"></i> Đăng Nhập</button>
+    </div>
+    <div class="cart-icon" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+      <button class="btn btn-outline-success"><i class="bi bi-cart3"></i></button>
+    </div>
+  </nav>
+<!-- offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Giỏ hàng của bạn</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Nội dung giỏ hàng của bạn ở đây -->
+      <p>Đây là giỏ hàng của bạn. Bạn có thể đặt các mặt hàng và thông tin khác vào đây.</p>
+      <div class="offcanvas-footer">
+        <a href="cart.html" class="btn btn-outline-info text-center">Xác Nhận Đơn Hàng</a>
       </div>
-    <!-- modal -->
-    <div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="loginRegisterModalLabel">Đăng Nhập</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                  <form>
-                    <div class="mb-2">
-                      <label for="loginEmail" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
-                    </div>
-                    <div class="mb-2">
-                      <label for="loginPassword" class="form-label">Mật Khẩu</label>
-                      <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
-                    </div>
-                    <div class="input-group mb-2 d-flex justify-content-between">
-                      <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="formCheck">
-                          <label for="formCheck" class="form-check-label text-secondary"><small>Ghi Nhớ</small></label>
-                      </div>
-                      <div class="forgot">
-                          <small><a href="#">Quên Mật Khẩu?</a></small>
-                      </div>
-                    </div>
-                    <div class="text-center mb-3">
-                      <button type="submit" class="btn btn-lg btn-outline-info w-100">Đăng Nhập</button>
-                  </div>
-                  <div class="input-group mb-3">
-                      <button class="btn btn-lg btn-light w-100 fs-6">
-                          <i class="bi bi-google"></i>
-                          <small>Đăng Nhập bằng Google</small>
-                      </button>
-                  </div>
-                    <div class="register text-center mt-3">
-                      <p>Bạn Chưa Có Tài Khoản?<a href="register.html"> Đăng Ký</a></p>
-                    </div>
-                  </form>
+    </div>
+  </div>
+<!-- modal -->
+<div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="loginRegisterModalLabel">Đăng Nhập</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+              <form>
+                <div class="mb-2">
+                  <label for="loginEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="Nhập email của bạn">
                 </div>
+                <div class="mb-2">
+                  <label for="loginPassword" class="form-label">Mật Khẩu</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu của bạn">
+                </div>
+                <div class="input-group mb-2 d-flex justify-content-between">
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="formCheck">
+                      <label for="formCheck" class="form-check-label text-secondary"><small>Ghi Nhớ</small></label>
+                  </div>
+                  <div class="forgot">
+                      <small><a href="#">Quên Mật Khẩu?</a></small>
+                  </div>
+                </div>
+                <div class="text-center mb-3">
+                  <button type="submit" class="btn btn-lg btn-outline-info w-100">Đăng Nhập</button>
+              </div>
+              <div class="input-group mb-3">
+                  <button class="btn btn-lg btn-light w-100 fs-6">
+                      <i class="bi bi-google"></i>
+                      <small>Đăng Nhập bằng Google</small>
+                  </button>
+              </div>
+                <div class="register text-center mt-3">
+                  <p>Bạn Chưa Có Tài Khoản?<a href="register.html"> Đăng Ký</a></p>
+                </div>
+              </form>
             </div>
-          </div>
         </div>
       </div>
-    
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark header-2 sticky-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark header-2 sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Sản Phẩm</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Loại Sản Phẩm
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Thịt</a></li>
+              <li><a class="dropdown-item" href="#">Hải Sản</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Rau</a></li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-    </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html" tabindex="-1">Blog</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+          <button class="btn btn-outline-success" style="width: 150px;" type="submit">Tìm kiếm</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 <main>
     <div class="breadcrumb-area">
     <div class="container">
